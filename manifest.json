@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "SafeBrowse Warning",
+  "version": "1.0.0",
+  "description": "Warns before opening potentially suspicious websites, while leaving the final choice to the user.",
+  "permissions": ["webNavigation", "storage", "tabs"],
+  "host_permissions": ["<all_urls>"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_title": "SafeBrowse Warning", "default_popup": "popup.html" },
+  "web_accessible_resources": [{ "resources": ["warning.html", "warning.css", "warning.js"], "matches": ["<all_urls>"] }]
+}
